@@ -1,0 +1,14 @@
+
+<% theme ||= false -%>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title><%= browser_title(yield(:title)) %></title>
+<link rel="shortcut icon" href="/favicon.ico" />  <meta charset='<%= Refinery::Application.config.encoding %>' />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+ <%= stylesheet_link_tag "style" %>   <%= "<!--[if IE 7]>#{stylesheet_link_tag 'ie7'}<![endif]-->".html_safe if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+ <%= "<meta name=\"keywords\" content=\"#{@meta.meta_keywords}\" />".html_safe if @meta.meta_keywords.present? %>
+ <%= "<meta name=\"description\" content=\"#{@meta.meta_description}\" />".html_safe if @meta.meta_description.present? -%>
+ <%= yield :head_libraries %>
+ <%= yield :head %>
+</head>

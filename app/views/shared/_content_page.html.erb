@@ -1,0 +1,4 @@
+
+<%= @page[:parent_content].to_s.html_safe %>
+<%= @page[:child_content].to_s.html_safe %>
+<%= render :partial => '/shared/draft_page_message' unless @page.nil? or @page.live? -%>
