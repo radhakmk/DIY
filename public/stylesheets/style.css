@@ -93,7 +93,7 @@ hr { display: none; }
 
 #menu {
 	float: left;
-	width: 600px;
+	width: 920px;
 	height: 90px;
 }
 
@@ -113,7 +113,7 @@ hr { display: none; }
 	display: block;
 	float: left;
 	height: 32px;
-	padding: 14px 20px 0px 20px;
+	padding: 14px 18px 0px 18px;
 	letter-spacing: -1px;
 	text-decoration: none;
 	text-align: center;
